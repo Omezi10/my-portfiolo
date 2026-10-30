@@ -145,6 +145,17 @@ footer .socials{justify-content:center; margin:0 auto 26px;}
 footer hr{border:none; border-top:1px solid var(--line); max-width:1080px; margin:0 auto 20px;}
 footer .fine{color:var(--muted); font-size:.85rem;}
 footer .fine b{color:var(--blue2);}
+.photo{width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:8px; border:1px solid var(--line);}
+.about-photo{width:100%; object-fit:cover;}
+.proj-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:36px;}
+.proj-card{display:block; background:var(--panel); border:1px solid var(--line); border-radius:10px; overflow:hidden; transition:border-color .2s;}
+.proj-card:hover{border-color:var(--blue);}
+.proj-card img{width:100%; aspect-ratio:16/10; object-fit:cover; display:block; border-bottom:1px solid var(--line);}
+.proj-info{padding:18px 20px 22px;}
+.proj-info h3{font-size:1.1rem; margin-bottom:6px;}
+.proj-info p{color:var(--muted); font-size:.9rem; margin-bottom:12px;}
+.proj-link{color:var(--blue2); font-weight:700; font-size:.9rem;}
+@media(max-width:760px){.proj-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -198,22 +209,18 @@ footer .fine b{color:var(--blue2);}
         <div class="tag">Full Stack Web Developer</div>
         <div class="socials">
           <a class="icon-btn" href="#" aria-label="TikTok"><svg><use href="#ic-tiktok"/></svg></a>
-          <a class="icon-btn" href="#" aria-label="Instagram"><svg><use href="#ic-insta"/></svg></a>
+          <a class="icon-btn" href="https://www.instagram.com/omezi_ogochukwu" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#ic-insta"/></svg></a>
           <a class="icon-btn" href="#" aria-label="Facebook"><svg><use href="#ic-fb"/></svg></a>
-          <a class="icon-btn" href="#" aria-label="Twitter"><svg><use href="#ic-x"/></svg></a>
+          <a class="icon-btn" href="https://x.com/wisebread_99" target="_blank" rel="noopener" aria-label="Twitter"><svg><use href="#ic-x"/></svg></a>
         </div>
       </div>
-      <div class="photo-slot">
-        <svg><use href="#ic-user"/></svg>
-        <span>Photo coming soon</span>
-      </div>
-    </div>
+      <img class="photo" src="omezi.jpg" alt="Omezi Ogochukwu Wisdom">
   </section>
 
   <section id="about" class="page">
     <h2 class="block-title">Full Stack <span class="accent">Developer.</span></h2>
     <div class="about-top">
-      <div class="about-photo"></div>
+      <img class="about-photo" src="omezi-about.jpg" alt="Omezi Ogochukwu Wisdom">
       <div>
         <p>I'm a full stack web developer with a growing focus on building clean, responsive interfaces backed by dependable server-side logic. I'm currently sharpening my craft through hands-on training at LOCTECH IT Training Institute, where I work on real projects that push me to write more efficient, maintainable code. I care about getting the details right — from how a page looks to how it performs — and I bring the same discipline to every project I take on.</p>
         <div class="info-list">
@@ -296,11 +303,16 @@ footer .fine b{color:var(--blue2);}
       <p class="lead">A look at what I've been building. New work is added as it's completed.</p>
       <div class="crumb">Home / <span class="current">Projects</span></div>
     </div>
-    <div class="empty">
-      <svg><use href="#ic-folder"/></svg>
-      <h3>Nothing here yet</h3>
-      <p>Projects are on the way — check back soon.</p>
+   <div class="proj-grid">
+  <a class="proj-card" href="https://aura-studio-rosy-eta.vercel.app/" target="_blank" rel="noopener">
+    <img src="project1.png" alt="Project name screenshot">
+    <div class="proj-info">
+      <h3>Project Name</h3>
+      <p>Designed and developed a responsive one-page website for Aura Studio, a London-based branding and design agency. The site presents the studio’s story and core services (Branding, UI/UX Design and Web Design), and includes a contact form that makes it easy for prospective clients to start a project.</p>
+      <span class="proj-link">View project →</span>
     </div>
+  </a>
+</div>
   </section>
 
   <section id="contact" class="page">
